@@ -4,7 +4,6 @@ buildscript {
     repositories {
         google()
         jcenter()
-
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.2'
@@ -13,13 +12,13 @@ buildscript {
     }
 }
 
+apply {
+    from(rootProject.file("spotless/spotless.gradle"))
+}
+
 allprojects {
     repositories {
         google()
         jcenter()
     }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }
