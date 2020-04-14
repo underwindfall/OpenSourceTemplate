@@ -1,3 +1,17 @@
+apply plugin: "com.novoda.bintray-release"
+
+publish {
+    def artifactProjectID = "todo"
+
+    userOrg = "undervoid"
+    repoName = "TODO"
+    groupId = "com.qifan.todo"
+    artifactId = artifactProjectID
+    publishVersion = 1
+    desc = "none"
+    website = "none"
+}
+
 ext.library = [
         min_sdk             : 19,
         compile_sdk         : 29,
