@@ -1,19 +1,22 @@
 apply plugin: "com.diffplug.gradle.spotless"
 spotless {
     java {
-        target "**/*.java"
+        target "**/src/**/*.java"
+        targetExclude '**/spotless/*.java'
         trimTrailingWhitespace()
         removeUnusedImports()
-        googleJavaFormat()
+        googleJavaFormat("1.8")
         endWithNewline()
+        licenseHeaderFile rootProject.file('spotless/copyright.java')
     }
     kotlin {
         target "**/src/**/*.kt"
-        targetExclude "**/spotless/*.kt","buildSrc/src/main/java/Dependencies.kt"
-        ktlint("0.36.0").userData(["indent_size": "2", "continuation_indent_size": "2"])
-        licenseHeaderFile rootProject.file("spotless/spotless.license.kt")
+        targetExclude '**/spotless/*.kt'
+        targetExclude '**/buildSrc/src/main/java/*.kt'
+        ktlint("0.37.2")
         trimTrailingWhitespace()
         endWithNewline()
+        licenseHeaderFile rootProject.file('spotless/copyright.kt')
     }
     groovyGradle {
         target "**/*.gradle"

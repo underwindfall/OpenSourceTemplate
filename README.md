@@ -7,7 +7,7 @@ This repository can be used as a template to create new GitHub repositories for 
 ./gradlew spotlessApply
 ```
 
-*Make sure you update [spotless.license.kt](spotless/spotless.license.kt) author info!* Other settings for this plugin can be tweaked in [spotless/spotless.gradle](spotless/spotless.gradle).
+*Make sure you update [spotless.license.kt](spotless/copyright.kt) author info!* Other settings for this plugin can be tweaked in [spotless/spotless.gradle](spotless/spotless.gradle).
 
 ### Check if Dependencies Are Up-to-Date
 
