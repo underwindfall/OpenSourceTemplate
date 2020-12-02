@@ -9,7 +9,7 @@ ext.versions = [
 ext.deps = [
         gradle_plugins: [
                 android        : "com.android.tools.build:gradle:4.0.1",
-                spotless       : "com.diffplug.spotless:spotless-plugin-gradle:5.7.0",
+                spotless       : "com.diffplug.spotless:spotless-plugin-gradle:5.8.2",
                 bintray_release: "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5",
                 kotlin         : "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.10"
         ],

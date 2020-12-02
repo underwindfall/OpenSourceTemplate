@@ -1,16 +1,16 @@
 buildscript {
     apply from: rootProject.file("dependencies.gradle")
-    ext.kotlin_version = "1.4.10"
+    ext.kotlin_version = "1.4.20"
     repositories {
         google()
         jcenter()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath('com.android.tools.build:gradle:4.1.0')
+        classpath('com.android.tools.build:gradle:4.1.1')
         classpath(deps.gradle_plugins.spotless)
         classpath(deps.gradle_plugins.bintray_release)
-        classpath("com.github.ben-manes:gradle-versions-plugin:0.33.0")
+        classpath("com.github.ben-manes:gradle-versions-plugin:0.36.0")
     }
 }
 
